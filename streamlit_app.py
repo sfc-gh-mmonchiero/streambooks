@@ -1,6 +1,5 @@
 import streamlit as st
 from subprocess import Popen, PIPE
-import shlex
 
 @st.experimental_fragment
 def box(key):
@@ -10,7 +9,7 @@ def box(key):
 
 def main():
     with st.sidebar:
-        rows = st.number_input("Number of rows", 1)
+        rows = st.number_input("Number of rows", 3)
 
     st.title("My Streambook")
     for i in range(rows):
