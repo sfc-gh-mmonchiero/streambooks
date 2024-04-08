@@ -1,5 +1,4 @@
 import streamlit as st
-from subprocess import Popen, PIPE
 
 @st.experimental_fragment
 def box(key):
