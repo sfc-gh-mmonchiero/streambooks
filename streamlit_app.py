@@ -9,7 +9,10 @@ def cell(key):
     with st.container(border=True):
         text = st.text_area("Type here", key=f"text_area{key}")
         if text:
-            exec(text, None, st.session_state.my_locals)
+            try:
+                exec(text, None, st.session_state.my_locals)
+            except Exception as e:
+                st.exception(e)
         st.button("Run cell", key=f"button{key}")
 
 def main():
